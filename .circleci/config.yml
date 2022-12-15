@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/js-mocha-chai-graphql
     docker:
-      - image: circleci/node:16.18.0
+      - image: circleci/node:latest
     steps:
       - checkout
       - run:
