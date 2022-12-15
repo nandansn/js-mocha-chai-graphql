@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/js-mocha-chai-graphql
     docker:
-      - image: node:16
+      - image: cimg/node:19.2.0
     steps:
       - checkout
       - run:
