@@ -3,12 +3,12 @@ jobs:
   build:
     working_directory: ~/js-mocha-chai-graphql
     docker:
-      - image: node:18
+      - image: node:16
     steps:
       - checkout
       - run:
           name: update-npm
-          command: "sudo npm install -g npm@5"
+          command: "sudo npm install -g npm@8"
       - run:
           name: install-packages
           command: npm install
