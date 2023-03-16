@@ -20,4 +20,25 @@ describe("Test GraphQL", () => {
       assert.fail(error.message);
     }
   });
+
+  it("", async () => {
+    try {
+      let q = `query {
+  continent (code: "AF") {
+    name,
+    code,
+    countries {
+      name,
+    }
+  }
+  
+}`;
+      let res = await request(endPoint, q);
+      let length = res.continent.countries.length
+    
+      expect(58).to.be.equal(length)
+    } catch (error) {
+        assert.fail(error)
+    } 
+  });
 });
